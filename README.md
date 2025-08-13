@@ -1,7 +1,7 @@
 # Python Learner’s Notebook: W3Schools + Databricks
 
 Welcome to my personal Python learning repository!  
-I’m building this while following the [W3Schools Python Tutorial](https://www.w3schools.com/python/) and practicing all concepts in **Databricks**.  
+I’m building this while following the [W3Schools Python Tutorial](https://www.w3schools.com/python/) and practicing all concepts in [**Databricks**](https://dbc-427a45a8-c932.cloud.databricks.com/?o=675882156419584).  
 All code files are saved in `.ipynb` (Jupyter Notebook) format.
 
 ---
