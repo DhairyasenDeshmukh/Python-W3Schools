@@ -1,0 +1,34 @@
+NUMBERS
+
+There are three types of numeric values in python
+- int		x = 1
+- float		y = 2.8
+- complex	z = 1j
+
+
+- int: Whole number, positive pr negative, without decimals and of unlimited length.
+- float: Positive or negative number containing one or more decimal points. Can also be scientific with an "e" to indicate the power of 10. (-87.7e100)
+- complex: written with a "j" as the imaginary part.
+
+
+# Conversion of  numeric data types
+- For this you need to create a new variable and assign the changed data type to the existing variable.
+- Example:
+		x = 5
+		y = float(x)
+
+Note: You cannot convert complex numbers into another number type.
+
+# Random Numbers
+- For generating random numbers we import the random module and then print the random number within a defined range.
+- Examples:
+		import random
+		print(random.randrange(1,10))
+
+
+# Casting
+- Casting is used to assign datatypes for variables manually.
+- Example:
+		x = int(3)
+		y = str("Name")
+		z = float(5)
