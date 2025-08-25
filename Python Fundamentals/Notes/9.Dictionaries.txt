@@ -1,0 +1,28 @@
+DICTIONARIES
+
+- Dictionaries are used to store data values in key:value pair.
+- Syntax:
+		dict = {
+			"brand" : "Ford",
+			"model", "Mustang",
+			"year":"1964"	
+		}
+
+- Dictionary items are ordered, changable and do not allow duplicate KEYS.
+
+# Dictionary Length
+- To determine how many items(keys) are there in the dictionary use this function.
+		len(dict)
+
+# Dictionary Data types
+The values in dictionary items can be of any data type
+		thisdict = {
+			  "brand": "Ford",
+			  "electric": False,
+			  "year": 1964,
+			  "colors": ["red", "white", "blue"]
+			        }
+
+# The dict() Constructor
+- Dictionary is also possible to create a dictionary with dict() constructor like ant other variable.
+		thisdict = dict(name = "Jakie", age = "28", country = "California")

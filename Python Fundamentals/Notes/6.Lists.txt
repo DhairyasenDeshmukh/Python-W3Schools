@@ -1,0 +1,196 @@
+LISTS
+
+List is a collection which is ordered and changeable. Allows duplicate members.
+Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+Dictionary is a collection which is ordered** and changeable. No duplicate members.
+
+- Lists are used to store multiple items in a single variable. Lists are created by square brackets.
+
+fruits = ["Apple", "Mango", "Peach"]
+
+NOTE: List items are ordered, changeable and allow changeable values
+
+- List items are indexed with first item having index [0]
+
+- There are some functions that will change the order of the items but generally the items sequence will remain the same.
+
+- List can be manipulated.
+
+# List Length
+- len(name_of_list) is used to determine the total number of items in the list.
+
+- List items can be of any data type and a single list can contain different data types.
+
+- it is also possible to construct a list by using list constructor list((arguments))
+
+
+# Accessing List
+- List items can be accessed through the index of the items.
+- Example:
+		list = ["A", "B", "C"]
+		print(list[1])		
+- Items can be accessed from the last with negative index, similar to string.
+- Items can be accessed within a range, also similar to string.
+		list = ["A", "B", "C"]
+		print(list[0:2])
+
+
+# Checking if the item exits
+- Can be checked by "in" command.
+
+		if "Rose" in flowers:
+		    flowers = ["Rose", "Lily", "Tulip", "Daisy"]
+  		    print("Yes, Rose is in the list")
+
+
+# Change item value
+- Change the value with the index of that item within the list syntax and replace it with = sign.
+		List = ["A", "B", "C"]
+		List[0] = "Z"
+		List[0:2] = ["X", "Y", "Z"]
+Note: The length of the list will change when the number of items inserted does not match the number of items replaced.
+		thislist = ["apple", "banana", "cherry"]
+		thislist[1:3] = ["watermelon"]
+
+# Inserting value
+- Items are inserted with an index number.
+- Syntax:
+	list.insert(index, "Item")
+
+
+# Append items
+- Items are added at the last of the list by command list.append("item")
+	
+
+# Extend list
+- Append items of the list from another list / tuple / sets.
+- Syntax:
+		list_1.extend(list_2)
+
+
+# Remove specified item
+- Remove items from the list by directly typing that item name in field.
+- If there are more than one item with the specified value, the remove() method removes the first occurrence
+		list.remove("item_name")
+
+
+# Remove specific index
+- Remove a specific index by using .pop()
+- If you do not specify the index, the pop() method removes the last item.
+		list.pop(2)
+- The del keyword also removes the specified index:
+		del list[3]
+- The del keyword also deletes the list completely.
+		del list
+
+
+# Clear the list
+- This method empties the list completely but does not delete it.
+		list.clear() 
+
+
+# Loop through list
+- Items with the list can be interacted with for loops, while loops.
+		for i in list:
+			print(i)
+
+- While loops
+		i = 0
+		while i < 3:
+		  print(flowers[i])
+		  i += 1
+
+
+# Looping using list comprehension
+- Referred to as the simplest method for looping list
+		thislist = ["apple", "banana", "cherry"]
+		[print(x) for x in thislist]
+
+- print(x) prints the value to the console but returns None. In Python, print() always returns None.
+- The list comprehension collects the return values into a list: [None, None, None]
+- You don’t need a list comprehension for just printing. Use a regular loop:
+
+
+_________________________________________________________________________________________
+
+# LIST COMPREHENSION
+
+- List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+- Syntax:
+		newlist = [expression for item in iterable if condition == True]
+
+
+		# Creating a list from an existing list using list comprehension
+		compo = ["apple", "avocado", "apricot", "almond", "anchovy","bonono", "blueberry", "blockberry", "breod", "beet"]
+		# List containing items that only has a in it.
+		print("List that contains items from compo that has only a's in it:")
+		only_a = [i for i in compo if "a" in i]
+		print(only_a)
+		# List containing items that only has b in it.
+		only_b = [b for b in compo if "b" in b]
+		print("\nList that contains items from compo that has only b's in it:")
+		print(only_b)
+
+
+# Conditions
+- Conditions can be applied like filters.
+- Conditions are set like, whatever condition you have given it will return TRUE.
+
+# Iterables
+- Can be a variable where you want to loop the items.
+
+_________________________________________________________________________________________
+
+# Sorting List alphabetically
+- List once sorted it updates the value of the list. You no longer need to sort it again and again
+- Done by command - list.sort()
+- The lists can be sorted into reverse order by - list.sort(reverse = True)
+- By default the list.sort() command sort order is case sensitive meaning all the capital letters will be sorted before the small letters.
+- Case sensitive sort can be done using this command:
+		list.sort(key = str.lower)
+
+
+# Copying a list
+- Copying a list is done by using the .copy() method.
+- Sytax:
+		List1 = [1,2,3]
+		List2 = list1.copy()
+		
+- Can also use the list() method to copy lists.
+- Syntax:
+		list1 = [1,2,3]
+		list2 = list(list1)
+
+- Can also copy list by using Slicing operators (:)
+- Syntax:
+		list1 = [1,2,3]
+		list2 = list1[:]
+
+
+# Join Lists
+- There are mainly 3 ways to concatenate two or more lists
+- Operator "+"
+		List3 = List1 + List2
+- Append list
+		for i in list2:
+			list1.append(i)
+- Extend List
+		List1.extend(List2)
+
+
+LIST METHODS
+
+Method		Description
+
+append()	Adds an element at the end of the list
+clear()		Removes all the elements from the list
+copy()		Returns a copy of the list
+count()		Returns the number of elements with the specified value
+extend()	Add the elements of a list (or any iterable), to the end of the current list
+index()		Returns the index of the first element with the specified value
+insert()	Adds an element at the specified position
+pop()		Removes the element at the specified position
+remove()	Removes the item with the specified value
+reverse()	Reverses the order of the list
+sort()		Sorts the list
