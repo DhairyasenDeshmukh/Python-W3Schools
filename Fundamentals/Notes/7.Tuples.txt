@@ -1,0 +1,66 @@
+# TUPLE
+- Tuple is used to store multiple items in a single variable just like list.
+- Tuples is unchangeable meaning items cannot be added or removed.
+- Since tuples are indexed it allows duplicate values.
+- Tuple can contain varies data types as items.
+- Syntax:
+	numbers = (1, 2, 3, 4, 5)
+	nums = tuple(("Mars", "Jupiter", "Earth"))
+- If you want to create a tuple with single item you need to give "," (comma) after that item.
+
+
+# Access Tuples
+- Tuple items can be accessed in similar format as list. Mention the index number in [] next to the tuple name.Ex: tuple[2]
+- Negative indexing works with tuple just as list. Ex: tuple[-2]
+- Ranged Indexes also work with tuple. Ex: tuple[1:4] # (4 being not inclusive)
+- You can get items with negative index however the sequence of the items stay same (does not reverse)
+
+
+# Check if Item exists
+- Item is inside the tuple or not is checked by "in" command
+	if "item" in tuple:
+		print(True)
+
+
+# Changing tuple values
+- Tuples are unchangeable. A workaround for manipulating tuple items is, convert it into a list, update values and convert it back.
+- You can add tuple into tuples. So you can also create a new tuple with single value and add it to existing tuple
+
+
+# Unpacking Tuples
+- Assigning values to a tuple is called "Packing"
+- In Python, we are also allowed to extract the values back into variables. This is called "unpacking"
+- Example:
+	fruits = ("apple", "orange", "grapes")
+	(red, orange, green) = fruits
+	print(red, orange, green)
+NOTE: NUMBER OF VARIABLES MUST MATCH THE NUMBER OF ITEMS IN TUPLE
+
+
+# Using Asterisk (*)
+- If the number of variables are less than the number of items in tuple. The last variable can be assigned with the remaining items from a list by using (*).
+- If the Asterisk is used for a variable in the middle, then it will take the items into a list only till the index, from where the remaining variables can be assigned to items.
+- To understand better with an example:
+
+	fruits = ("grapes", "mango", "papaya", "pineapple", "cherry")
+	(green, *tropical, red) = fruits
+	print(green)
+	print(tropical)
+	print(red)
+	
+- The 'green' is assiged to "grapes" and 'red' is assigned to "cherry at last". The remaining variables in the middle are assigned as list to the '*tropical'
+
+
+# Loop through a tuple
+- Tuples can be looped using for loop and while loop. Just as list
+
+
+# Join two tuples
+- To join two or more tuples you can use the + operator
+- If you want to multiply the content of a tuple a given number of times, you can use the * operator
+
+
+# Tuple methods:
+	Method		Description
+	count()		Returns the number of times a specified value occurs in a tuple
+	index()		Searches the tuple for a specified value and returns the position of where it was found

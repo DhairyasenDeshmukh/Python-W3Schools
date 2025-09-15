@@ -1,0 +1,3 @@
+# Return all the user variable
+- print([k for k in globals().keys() if not k.startswith("__")])
+

@@ -1,0 +1,116 @@
+# SETS
+
+- Set is a collection which is unordered, unchangeable and unindexed.
+- It is possible to add or remove items from the sets.
+- Syntax: 
+        nameset = {"Bob", "Cat", "Bane", "Vic"}
+- Sets are unordered so it is unsure in which order the set items will appear.
+- Sets don't allow duplicate values. Duplicates will be ignored.
+- Sets can be of any data type
+
+NOTE: IF YOU HAVE A LIST THAT CONTAINS DUPLICATES AND WANT TO REMOVE THEM, CONVERT IT INTO A SET AND CONVERT IT BACK INTO A LIST.
+
+Note: The values (True, 1) and (False, 0) are considered the same value in sets, and are treated as duplicates
+
+
+# ACCESSING SET ITEMS
+- You cannot access items in a set by their index.
+- Set items can be accessed using for loops.
+        num = {1,2,3,4,5,6,7,8,9,10}
+            for i in num:
+                if i % 2 == 0:
+                print(i)
+
+
+# ADDING SET ITEMS
+- Items in a set are added by using add() function
+        set,add(items)
+
+- Add items from other set into a current set by using update(set_name) function
+        set_1 = {1,2}
+        set_2 = {4,5}
+        set_1.update(set_2)
+
+- Update function can be used to add multiple items into the set
+        set_1.update({6,7,8})
+- Update function can be used to add ant iteration (List, Tuple) to the set.
+- Update changes the original set and does not return a new set.
+- Update removes any duplicate items
+
+# REMOVING SET ITEMS
+- Items from a set can be removed by using these function
+    remove()
+    discard()
+- If the item to remove does not exist then remove returns and error discard will not return error.
+- pop() removes the first item from the set.
+- clear() empties the list completely
+- del() deletes the list completely
+
+
+# JOIN SETS
+- There are several functions to join the sets.
+
+- union(): Joins the set from the both sides.
+- update(): Joins one set into another.
+- intersection(): Joins sets by keeping only unique values.
+- difference(): Keeps the items from the first set that are not in the other sets.
+- symmetric difference(): Keeps all the items from both sets except the duplicates.
+
+# Union
+- Returns a new set with all items from all sets.
+- Alternative operators for Union is "|".
+- You can join sets and tuples or lists too.
+- It removes the duplicate values.
+
+NOTE: YOU CAN ONLY JOIN SETS WITH "|" OPERATOR. FOR JOINING MULTIPLE DATA TYPES COLLECTIONS USE ONLY UNION.
+
+
+
+# INTERSECTION
+- Returns a new set that only contains the items that are present in both sets.
+- Alternative operators for Union is "&".
+
+NOTE: YOU CAN ONLY JOIN SETS WITH "&" OPERATOR. FOR JOINING MULTIPLE DATA TYPES COLLECTIONS USE ONLY INTERSECTION.
+
+
+# DIFFERENCE
+- Returns a new set that will contain only the items from the first set that are not present in the other set.
+- Alternative operators for Union is "-".
+- The difference_update() method will also keep the items from the first set that are not in the other set, but it will change the original set instead of returning a new set.
+
+
+NOTE: YOU CAN ONLY JOIN SETS WITH "-" OPERATOR. FOR JOINING MULTIPLE DATA TYPES COLLECTIONS USE ONLY DIFFERENCE.
+
+
+# SYMMETRIC DIFFERENCE
+- The symmetric_difference() method will keep only the elements that are NOT present in both sets.
+- Alternative operators for Union is "^".
+- The symmetric_difference_update() method will also keep all but the duplicates, but it will change the original set instead of returning a new set.
+
+Note: The ^ operator only allows you to join sets with sets, and not with other data types like you can with the symmetric_difference() method.
+
+
+# SET METHODS
+
+Method				Shortcut	Description
+
+add()	 					Adds an element to the set
+clear()	 					Removes all the elements from the set
+copy()	 					Returns a copy of the set
+difference()			-		Returns a set containing the difference between two or more sets
+difference_update()		-=		Removes the items in this set that are also included in another, specified set
+discard()	 				Remove the specified item
+intersection()			&		Returns a set, that is the intersection of two other sets
+intersection_update()		&=		Removes the items in this set that are not present in other, specified set(s)
+isdisjoint()	 				Returns whether two sets have a intersection or not
+issubset()			<=		Returns True if all items of this set is present in another set
+ 				<		Returns True if all items of this set is present in another, larger set
+issuperset()			>=		Returns True if all items of another set is present in this set
+ 				>		Returns True if all items of another, smaller set is present in this set
+pop()	 					Removes an element from the set
+remove()	 				Removes the specified element
+symmetric_difference()		^		Returns a set with the symmetric differences of two sets
+symmetric_difference_update()	^=		Inserts the symmetric differences from this set and another
+union()				|		Return a set containing the union of sets
+update()			|=		Update the set with the union of this set and others
+
