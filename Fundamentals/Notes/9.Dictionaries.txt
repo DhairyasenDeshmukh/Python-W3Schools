@@ -4,14 +4,18 @@ DICTIONARIES
 - Syntax:
 		dict = {
 			"brand" : "Ford",
-			"model", "Mustang",
+			"model":"Mustang",
 			"year":"1964"	
 		}
 
 - Dictionary items are ordered, changable and do not allow duplicate KEYS.
 
+NOTE: THE OUTPUT DOES NOT RETURN ERROR UPON DUPLICATE KEYS AND TAKE THE LATEST ENTRY OF DUPLICATE KEY AS ITS VALUE
+
+
 # Dictionary Length
 - To determine how many items(keys) are there in the dictionary use this function.
+- Duplicate keys will be ignored and will only be counted as one.
 		len(dict)
 
 # Dictionary Data types
@@ -26,3 +30,90 @@ The values in dictionary items can be of any data type
 # The dict() Constructor
 - Dictionary is also possible to create a dictionary with dict() constructor like ant other variable.
 		thisdict = dict(name = "Jakie", age = "28", country = "California")
+
+
+# Accessing Dictionary Items
+- You can get the values of the keys in the dictionary by indexing the keys not the index number.
+	dict1["key_name"]
+- Another method of getting the values is by using .get() function
+	dict1.get("key_name")
+- To obtain the keys of the dictionary use keys() function.
+	dict1.keys()
+- Obtain all items from the dictionary as pair of tuples in a list.
+	dict1.items()
+- Check if a key is in the dictionary with "in" command
+	if "key" in dict1:
+		print(True)
+		
+
+
+# Changing value of item
+- You can change the value of a specific item by referring to its key name
+	dict1.[key_1] = "Value"
+- The update() method will update the dictionary with the items from the given argument. The argument must be a dictionary, or an iterable object with key:value pairs
+	dict1.update({"key_1":"value_new"})
+
+
+
+# Adding new items
+-The update() method will update the dictionary with the items from a given argument. If the item does not exist, the item will be added.The argument must be a dictionary, or an iterable object with key:value pairs
+	dict1.update({"new_key":"new_value"})
+- Directly adding with key indexing
+	dict1.["new_key"] = "new_value"
+	
+
+
+# Removing Items
+- pop():	Removes the item with specified key name
+- popitem():	Removes the last added item into the dictionary
+- del:		Deletes the item from dictionary with specifies key index / deletes the entire dictionary 
+- clear():	Empties the dictionary
+
+
+# Looping in dictionary
+- Normal Loop returns the keys of the dictionary.
+- Loop through values by using dict.values as the loop arguement.
+- Loop through keys by using dict.keys as the loop argument.
+- Loop through both keys and values at once:
+	for x,y in num.items():
+		print(x,y)
+		
+		
+# Copying Dictionaries
+- Dictionaries can be copied by using constructor or copy() function
+	dict_2 = dict_1.copy()
+	dict_3 = dict(dict_2)
+	
+
+
+# Nested Dictionaries
+- Dictionaries can contain multiple dictionaries inside them.
+- There are two methods to do this. 
+	Normal nested method
+	Create multiple dictionaries and then add them to a separate parent dictionaries.
+- To access items from a nested dictionary, you use the name of the dictionaries, starting with the outer dictionary
+	print(myfamily["child2"]["name"])
+- Looping in nested dictionary:
+	for x, obj in myfamily.items():
+  		print(x)
+
+  		for y in obj:
+    			print(y + ':', obj[y])
+
+
+
+# Dictionary Methods
+
+Method		Description
+
+clear()		Removes all the elements from the dictionary
+copy()		Returns a copy of the dictionary
+fromkeys()	Returns a dictionary with the specified keys and value
+get()		Returns the value of the specified key
+items()		Returns a list containing a tuple for each key value pair
+keys()		Returns a list containing the dictionary's keys
+pop()		Removes the element with the specified key
+popitem()	Removes the last inserted key-value pair
+setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+update()	Updates the dictionary with the specified key-value pairs
+values()	Returns a list of all the values in the dictionary
